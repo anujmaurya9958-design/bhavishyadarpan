@@ -61,3 +61,70 @@ document.querySelectorAll('.service-card, .book-card, .testimonial-card, .alert-
   el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
   observer.observe(el);
 });
+
+// ===== SUPABASE FORM =====
+
+const SUPABASE_URL =
+"https://wyoifniqvjlftzyrwnzr.supabase.co";
+
+const SUPABASE_KEY =
+"sb_publishable_ICIEHqlXTsUECQTsurLmhQ_jPa2wy7B";
+
+const supabaseClient = supabase.createClient(
+SUPABASE_URL,
+SUPABASE_KEY
+);
+
+document.addEventListener("DOMContentLoaded", () => {
+
+const btn = document.getElementById("submitBtn");
+
+if (!btn) return;
+
+btn.addEventListener("click", async (e) => {
+
+e.preventDefault();
+
+const name = document.getElementById("name").value;
+const dob = document.getElementById("dob").value;
+const service = document.getElementById("service").value;
+const question = document.getElementById("question").value;
+
+if (!name) {
+alert("Please enter your name");
+return;
+}
+
+btn.disabled = true;
+btn.innerText = "Submitting...";
+
+const { error } = await supabaseClient
+.from("consultations")
+.insert([
+{
+name,
+dob,
+service,
+question
+}
+]);
+
+btn.disabled = false;
+btn.innerText = "Submit Request";
+
+if (error) {
+console.error(error);
+alert("Submission failed");
+return;
+}
+
+alert("🙏 Consultation request submitted successfully");
+
+document.getElementById("name").value = "";
+document.getElementById("dob").value = "";
+document.getElementById("service").value = "";
+document.getElementById("question").value = "";
+
+});
+
+});

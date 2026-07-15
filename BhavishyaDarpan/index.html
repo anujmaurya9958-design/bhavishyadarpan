@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bhavishya Darpan – युगो युगो धर्मः पुनः स्थापितः</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<canvas id="stars-bg"></canvas>
+
+<!-- NAV -->
+<nav>
+  <a href="#" class="nav-logo">
+    <svg width="34" height="34" viewBox="0 0 34 34">
+      <circle cx="17" cy="17" r="16" fill="none" stroke="rgba(201,146,42,0.7)" stroke-width="1"/>
+      <circle cx="17" cy="17" r="11" fill="none" stroke="rgba(201,146,42,0.4)" stroke-width="0.5"/>
+      <text x="17" y="22" text-anchor="middle" fill="#C9922A" font-size="14" font-family="serif">♐</text>
+    </svg>
+    <div class="nav-logo-text">Bhavishya<br>Darpan</div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="#home">Home</a></li>
+    <li><a href="#services">Astrology</a></li>
+    <li><a href="#numerology">Numerology</a></li>
+    <li><a href="#books">Books</a></li>
+    <li><a href="#proofs">Proofs</a></li>
+    <li><a href="#sessions">Live</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <button class="nav-consult" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Book Consultation</button>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <svg class="hero-mandala" viewBox="0 0 700 700" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <circle cx="350" cy="350" r="340" stroke="#C9922A" stroke-width="0.5"/>
+    <circle cx="350" cy="350" r="280" stroke="#C9922A" stroke-width="0.5"/>
+    <circle cx="350" cy="350" r="220" stroke="#C9922A" stroke-width="0.5"/>
+    <circle cx="350" cy="350" r="160" stroke="#C9922A" stroke-width="0.5"/>
+    <circle cx="350" cy="350" r="100" stroke="#C9922A" stroke-width="0.5"/>
+    <line x1="350" y1="10" x2="350" y2="690" stroke="#C9922A" stroke-width="0.4"/>
+    <line x1="10" y1="350" x2="690" y2="350" stroke="#C9922A" stroke-width="0.4"/>
+    <line x1="90" y1="90" x2="610" y2="610" stroke="#C9922A" stroke-width="0.4"/>
+    <line x1="610" y1="90" x2="90" y2="610" stroke="#C9922A" stroke-width="0.4"/>
+    <line x1="196" y1="14" x2="504" y2="686" stroke="#C9922A" stroke-width="0.3"/>
+    <line x1="504" y1="14" x2="196" y2="686" stroke="#C9922A" stroke-width="0.3"/>
+    <line x1="14" y1="196" x2="686" y2="504" stroke="#C9922A" stroke-width="0.3"/>
+    <line x1="14" y1="504" x2="686" y2="196" stroke="#C9922A" stroke-width="0.3"/>
+    <ellipse cx="350" cy="250" rx="35" ry="55" stroke="#C9922A" stroke-width="0.4" transform="rotate(0 350 350)"/>
+    <ellipse cx="350" cy="250" rx="35" ry="55" stroke="#C9922A" stroke-width="0.4" transform="rotate(30 350 350)"/>
+    <ellipse cx="350" cy="250" rx="35" ry="55" stroke="#C9922A" stroke-width="0.4" transform="rotate(60 350 350)"/>
+    <ellipse cx="350" cy="250" rx="35" ry="55" stroke="#C9922A" stroke-width="0.4" transform="rotate(90 350 350)"/>
+    <ellipse cx="350" cy="250" rx="35" ry="55" stroke="#C9922A" stroke-width="0.4" transform="rotate(120 350 350)"/>
+    <ellipse cx="350" cy="250" rx="35" ry="55" stroke="#C9922A" stroke-width="0.4" transform="rotate(150 350 350)"/>
+    <ellipse cx="350" cy="250" rx="35" ry="55" stroke="#C9922A" stroke-width="0.4" transform="rotate(180 350 350)"/>
+    <ellipse cx="350" cy="250" rx="35" ry="55" stroke="#C9922A" stroke-width="0.4" transform="rotate(210 350 350)"/>
+    <ellipse cx="350" cy="250" rx="35" ry="55" stroke="#C9922A" stroke-width="0.4" transform="rotate(240 350 350)"/>
+    <ellipse cx="350" cy="250" rx="35" ry="55" stroke="#C9922A" stroke-width="0.4" transform="rotate(270 350 350)"/>
+    <ellipse cx="350" cy="250" rx="35" ry="55" stroke="#C9922A" stroke-width="0.4" transform="rotate(300 350 350)"/>
+    <ellipse cx="350" cy="250" rx="35" ry="55" stroke="#C9922A" stroke-width="0.4" transform="rotate(330 350 350)"/>
+  </svg>
+
+  <div class="hero-content">
+    <div class="logo-emblem">
+      <svg viewBox="0 0 90 90" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="45" cy="45" r="42" fill="none" stroke="rgba(201,146,42,0.5)" stroke-width="1"/>
+        <circle cx="45" cy="45" r="35" fill="none" stroke="rgba(201,146,42,0.3)" stroke-width="0.5"/>
+        <text x="45" y="38" text-anchor="middle" fill="#C9922A" font-size="26" font-family="serif">🏹</text>
+        <text x="45" y="60" text-anchor="middle" fill="rgba(201,146,42,0.7)" font-size="9" font-family="Cinzel,serif" font-weight="700" letter-spacing="1">BHAVISHYA</text>
+        <text x="45" y="70" text-anchor="middle" fill="rgba(201,146,42,0.7)" font-size="9" font-family="Cinzel,serif" font-weight="700" letter-spacing="1">DARPAN</text>
+      </svg>
+    </div>
+    <div class="divider-om">ॐ</div>
+    <h1 class="hero-title">BHAVISHYA DARPAN</h1>
+    <p class="hero-subtitle-hindi">युगो युगो धर्मः पुनः स्थापितः</p>
+    <p class="hero-tagline">Astrology · Numerology · Ancient Wisdom · Divine Prophecy</p>
+    <div class="hero-ctas">
+      <a href="#services" class="btn-primary">Explore Readings</a>
+      <a href="#sessions" class="btn-ghost">Watch Live Sessions</a>
+    </div>
+  </div>
+  <div class="scroll-hint">Scroll</div>
+</section>
+
+<!-- SERVICES -->
+<section class="services-section" id="services">
+  <div class="section-inner">
+    <p class="section-eyebrow">Our Divine Sciences</p>
+    <h2 class="section-title">Paths to Cosmic Clarity</h2>
+    <div class="section-line"></div>
+    <p class="section-desc">Rooted in Vedic tradition and ancient scripture, our readings illuminate your dharmic path through the lens of astrology, numerology, and sacred Hindu texts.</p>
+    <div class="services-grid">
+      <div class="service-card">
+        <span class="service-icon">🪐</span>
+        <div class="service-title">Vedic Astrology (Jyotish)</div>
+        <p class="service-desc">Kundali analysis, planetary transits, Dasha predictions, and birth chart interpretation rooted in the ancient science of Jyotish Shastra.</p>
+      </div>
+      <div class="service-card">
+        <span class="service-icon">🔢</span>
+        <div class="service-title">Numerology</div>
+        <p class="service-desc">Name number, destiny number, and life path analysis — revealing the hidden vibrations that shape your personality, relationships, and fortune.</p>
+      </div>
+      <div class="service-card">
+        <span class="service-icon">📿</span>
+        <div class="service-title">Bhavishya Malika</div>
+        <p class="service-desc">Ancient prophecies of Achyutananda Das decoded for the modern seeker — understanding the cosmic events foretold centuries ago.</p>
+      </div>
+      <div class="service-card">
+        <span class="service-icon">📖</span>
+        <div class="service-title">Bhagavad Gita Guidance</div>
+        <p class="service-desc">Spiritual counselling through the eternal wisdom of the Bhagavad Gita — aligning your life choices with the divine teachings of Lord Krishna.</p>
+      </div>
+      <div class="service-card">
+        <span class="service-icon">🌙</span>
+        <div class="service-title">Muhurta & Panchang</div>
+        <p class="service-desc">Auspicious timing for marriages, business ventures, travels, and ceremonies — determined through classical Panchang calculations.</p>
+      </div>
+      <div class="service-card">
+        <span class="service-icon">💎</span>
+        <div class="service-title">Gemstone & Remedies</div>
+        <p class="service-desc">Personalized gemstone recommendations and Vedic remedies — Mantra, Yantra, and Tantra — to harmonize planetary influences in your life.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- RASHI WHEEL -->
+<section class="rashi-section" id="numerology">
+  <div class="section-inner">
+    <p class="section-eyebrow">The Twelve Rashis</p>
+    <h2 class="section-title">Your Zodiac Sign</h2>
+    <div class="section-line" style="margin: 0 auto 1rem;"></div>
+
+    <div class="rashi-wheel-wrap">
+      <svg viewBox="0 0 380 380" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="190" cy="190" r="185" fill="none" stroke="rgba(201,146,42,0.2)" stroke-width="1"/>
+        <circle cx="190" cy="190" r="145" fill="none" stroke="rgba(201,146,42,0.12)" stroke-width="0.5"/>
+        <circle cx="190" cy="190" r="80" fill="rgba(26,10,10,0.6)" stroke="rgba(201,146,42,0.3)" stroke-width="1"/>
+        <text x="190" y="183" text-anchor="middle" fill="#C9922A" font-size="28" font-family="serif">ॐ</text>
+        <text x="190" y="207" text-anchor="middle" fill="rgba(201,146,42,0.6)" font-size="9" font-family="Cinzel,serif" letter-spacing="2">ZODIAC</text>
+        <g id="rashis">
+          <text x="190" y="22" text-anchor="middle" fill="#E8B84B" font-size="11" font-family="Cinzel,serif">♈ Mesh</text>
+          <text x="285" y="52" text-anchor="middle" fill="#E8B84B" font-size="11" font-family="Cinzel,serif">♉ Vrishabha</text>
+          <text x="346" y="140" text-anchor="middle" fill="#E8B84B" font-size="11" font-family="Cinzel,serif">♊ Mithun</text>
+          <text x="346" y="240" text-anchor="middle" fill="#E8B84B" font-size="11" font-family="Cinzel,serif">♋ Kark</text>
+          <text x="290" y="330" text-anchor="middle" fill="#E8B84B" font-size="11" font-family="Cinzel,serif">♌ Simha</text>
+          <text x="190" y="366" text-anchor="middle" fill="#E8B84B" font-size="11" font-family="Cinzel,serif">♍ Kanya</text>
+          <text x="90" y="330" text-anchor="middle" fill="#E8B84B" font-size="11" font-family="Cinzel,serif">♎ Tula</text>
+          <text x="33" y="240" text-anchor="middle" fill="#E8B84B" font-size="11" font-family="Cinzel,serif">♏ Vrishchik</text>
+          <text x="33" y="140" text-anchor="middle" fill="#E8B84B" font-size="11" font-family="Cinzel,serif">♐ Dhanu</text>
+          <text x="92" y="52" text-anchor="middle" fill="#E8B84B" font-size="11" font-family="Cinzel,serif">♑ Makar</text>
+          <line x1="190" y1="5" x2="190" y2="145" stroke="rgba(201,146,42,0.15)" stroke-width="0.5"/>
+          <line x1="190" y1="235" x2="190" y2="375" stroke="rgba(201,146,42,0.15)" stroke-width="0.5"/>
+          <line x1="5" y1="190" x2="145" y2="190" stroke="rgba(201,146,42,0.15)" stroke-width="0.5"/>
+          <line x1="235" y1="190" x2="375" y2="190" stroke="rgba(201,146,42,0.15)" stroke-width="0.5"/>
+          <line x1="62" y1="62" x2="152" y2="152" stroke="rgba(201,146,42,0.12)" stroke-width="0.5"/>
+          <line x1="228" y1="228" x2="318" y2="318" stroke="rgba(201,146,42,0.12)" stroke-width="0.5"/>
+          <line x1="318" y1="62" x2="228" y2="152" stroke="rgba(201,146,42,0.12)" stroke-width="0.5"/>
+          <line x1="62" y1="318" x2="152" y2="228" stroke="rgba(201,146,42,0.12)" stroke-width="0.5"/>
+        </g>
+      </svg>
+    </div>
+    <div class="rashi-signs">
+      <span class="rashi-pill">Mesh (Mar 21–Apr 19)</span>
+      <span class="rashi-pill">Vrishabha (Apr 20–May 20)</span>
+      <span class="rashi-pill">Mithun (May 21–Jun 20)</span>
+      <span class="rashi-pill">Kark (Jun 21–Jul 22)</span>
+      <span class="rashi-pill">Simha (Jul 23–Aug 22)</span>
+      <span class="rashi-pill">Kanya (Aug 23–Sep 22)</span>
+      <span class="rashi-pill">Tula (Sep 23–Oct 22)</span>
+      <span class="rashi-pill">Vrishchik (Oct 23–Nov 21)</span>
+      <span class="rashi-pill">Dhanu (Nov 22–Dec 21)</span>
+      <span class="rashi-pill">Makar (Dec 22–Jan 19)</span>
+      <span class="rashi-pill">Kumbha (Jan 20–Feb 18)</span>
+      <span class="rashi-pill">Meen (Feb 19–Mar 20)</span>
+    </div>
+  </div>
+</section>
+
+<!-- BOOKS -->
+<section class="books-section" id="books">
+  <div class="section-inner">
+    <p class="section-eyebrow">Sacred Library</p>
+    <h2 class="section-title">Ancient Texts & Publications</h2>
+    <div class="section-line"></div>
+    <p class="section-desc">Explore our curated collection of Vedic scripture, predictive almanacs, and modern interpretations of timeless Hindu wisdom.</p>
+    <div class="books-grid">
+      <div class="book-card">
+        <div class="book-cover book-1">
+          <div class="book-pattern"></div>
+          <div class="book-name">Bhavishya Malika</div>
+        </div>
+        <p class="book-author">Achyutananda Das</p>
+      </div>
+      <div class="book-card">
+        <div class="book-cover book-2">
+          <div class="book-pattern"></div>
+          <div class="book-name">Bhagavad Gita — Divine Commentary</div>
+        </div>
+        <p class="book-author">Sanskrit & Hindi</p>
+      </div>
+      <div class="book-card">
+        <div class="book-cover book-3">
+          <div class="book-pattern"></div>
+          <div class="book-name">Vedic Jyotish Shastra</div>
+        </div>
+        <p class="book-author">Classical Edition</p>
+      </div>
+      <div class="book-card">
+        <div class="book-cover book-4">
+          <div class="book-pattern"></div>
+          <div class="book-name">Numerology — Ank Vidya</div>
+        </div>
+        <p class="book-author">Bhavishya Darpan</p>
+      </div>
+      <div class="book-card">
+        <div class="book-cover book-5">
+          <div class="book-pattern"></div>
+          <div class="book-name">Vishnu Purana Prophecies</div>
+        </div>
+        <p class="book-author">Ancient Texts</p>
+      </div>
+      <div class="book-card">
+        <div class="book-cover book-6">
+          <div class="book-pattern"></div>
+          <div class="book-name">Kaliyuga Predictions</div>
+        </div>
+        <p class="book-author">Bhavishya Darpan</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LIVE SESSIONS -->
+<div class="sessions-strip" id="sessions">
+  <div class="sessions-inner">
+    <div>
+      <div class="session-live-badge"><span class="live-dot"></span> Live & Upcoming</div>
+      <div class="session-title">Weekly Astrology Sessions</div>
+      <p class="session-desc">Join our live Jyotish and Numerology sessions — ask your questions directly and receive divine guidance in real time.</p>
+    </div>
+    <div style="display:flex; gap:1rem; flex-wrap:wrap;">
+      <div style="border:1px solid rgba(201,146,42,0.3); padding:1.25rem 1.75rem; border-radius:2px; min-width:180px;">
+        <div style="font-family:'Cinzel',serif; font-size:10px; letter-spacing:0.2em; color:var(--text-muted); margin-bottom:4px;">NEXT SESSION</div>
+        <div style="font-family:'Cinzel',serif; font-size:1rem; font-weight:700; color:var(--gold-light);">Every Sunday</div>
+        <div style="font-size:0.9rem; color:rgba(250,240,220,0.6); margin-top:2px;">9:00 PM IST</div>
+      </div>
+      <a href="#contact" class="btn-primary" style="align-self:center;">Join Session</a>
+    </div>
+  </div>
+</div>
+
+<!-- ALERTS -->
+<section class="alerts-section" id="alerts">
+  <div class="section-inner">
+    <p class="section-eyebrow">Cosmic Alerts</p>
+    <h2 class="section-title">Planetary Alerts & Predictions</h2>
+    <div class="section-line"></div>
+    <div class="alerts-grid">
+      <div class="alert-item">
+        <div class="alert-dot"></div>
+        <div>
+          <div class="alert-date">MAY 2026</div>
+          <div class="alert-text">Guru (Jupiter) transits into Mithun Rashi — a highly auspicious period for knowledge, travel, and new beginnings.</div>
+        </div>
+      </div>
+      <div class="alert-item">
+        <div class="alert-dot"></div>
+        <div>
+          <div class="alert-date">JUNE 2026</div>
+          <div class="alert-text">Shani's retrograde in Kumbha will test patience — ideal time for introspection and spiritual practice.</div>
+        </div>
+      </div>
+      <div class="alert-item">
+        <div class="alert-dot"></div>
+        <div>
+          <div class="alert-date">JULY 2026</div>
+          <div class="alert-text">Solar eclipse visible in India — Surya Grahan remedies recommended for Simha and Kark rashi natives.</div>
+        </div>
+      </div>
+      <div class="alert-item">
+        <div class="alert-dot"></div>
+        <div>
+          <div class="alert-date">ONGOING</div>
+          <div class="alert-text">Bhavishya Malika prophecy 47 — signs of dharmic revival intensify across the Indian subcontinent.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROOFS -->
+<section class="proofs-section" id="proofs">
+  <div class="section-inner">
+    <p class="section-eyebrow">Verified Accuracy</p>
+    <h2 class="section-title">List of Proofs & Past Predictions</h2>
+    <div class="section-line"></div>
+    <div class="proof-tabs">
+      <button class="proof-tab active" onclick="setTab(this,'astro')">Astrology</button>
+      <button class="proof-tab" onclick="setTab(this,'num')">Numerology</button>
+      <button class="proof-tab" onclick="setTab(this,'malika')">Bhavishya Malika</button>
+      <button class="proof-tab" onclick="setTab(this,'world')">World Events</button>
+    </div>
+    <div class="proofs-grid" id="proofs-grid">
+      <div class="proof-item">
+        <div class="proof-num">01</div>
+        <div class="proof-title">2019 General Elections</div>
+        <p class="proof-text">Predicted BJP's landslide victory with exact seat range 6 months prior through Shani-Rahu transit analysis.</p>
+      </div>
+      <div class="proof-item">
+        <div class="proof-num">02</div>
+        <div class="proof-title">2020 India-China Border</div>
+        <p class="proof-text">Mars-Saturn conjunction in Makara foretold aggressive geopolitical tension along northern borders.</p>
+      </div>
+      <div class="proof-item">
+        <div class="proof-num">03</div>
+        <div class="proof-title">Covid Pandemic Timing</div>
+        <p class="proof-text">Guru-Shani Yuti in Makara — a rare alignment predicted global upheaval and mass suffering well in advance.</p>
+      </div>
+      <div class="proof-item">
+        <div class="proof-num">04</div>
+        <div class="proof-title">Ram Mandir Consecration</div>
+        <p class="proof-text">Bhavishya Malika prophecy cross-referenced with Surya's exaltation to predict the historic Prana Pratishtha date.</p>
+      </div>
+      <div class="proof-item">
+        <div class="proof-num">05</div>
+        <div class="proof-title">Economic Turnaround 2024</div>
+        <p class="proof-text">India's GDP surge predicted via Jupiter-Venus conjunction in Taurus, indicating abundant material prosperity.</p>
+      </div>
+      <div class="proof-item">
+        <div class="proof-num">06</div>
+        <div class="proof-title">Natural Calamities 2023</div>
+        <p class="proof-text">Rahu-Ketu axis on Cancer-Capricorn identified as trigger for floods and seismic activity in specific regions.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="testimonials-section">
+  <div class="section-inner">
+    <p class="section-eyebrow">Blessings Received</p>
+    <h2 class="section-title">What Seekers Say</h2>
+    <div class="section-line"></div>
+    <div class="testimonials-row">
+      <div class="testimonial-card">
+        <div class="stars">★★★★★</div>
+        <p class="testimonial-text">The Kundali reading was astonishingly accurate. Events I hadn't told anyone about were revealed through the planetary positions. I was speechless.</p>
+        <div class="testimonial-author">Priya Sharma</div>
+        <div class="testimonial-role">Delhi, India</div>
+      </div>
+      <div class="testimonial-card">
+        <div class="stars">★★★★★</div>
+        <p class="testimonial-text">The numerology session changed my perspective completely. My business name was creating obstacles — after changing it as advised, things transformed within months.</p>
+        <div class="testimonial-author">Rajesh Nair</div>
+        <div class="testimonial-role">Mumbai, India</div>
+      </div>
+      <div class="testimonial-card">
+        <div class="stars">★★★★★</div>
+        <p class="testimonial-text">Bhavishya Malika interpretations here are unlike anything I've encountered. Deeply researched, spiritually grounded, and remarkably accurate for our times.</p>
+        <div class="testimonial-author">Ananya Mishra</div>
+        <div class="testimonial-role">Varanasi, India</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact-section" id="contact">
+  <div class="section-inner">
+    <p class="section-eyebrow">Begin Your Journey</p>
+    <h2 class="section-title">Book a Consultation</h2>
+    <div class="section-line"></div>
+    <div class="contact-grid">
+      <div>
+        <div class="form-group">
+          <label class="form-label">Full Name</label>
+          <input type="text" class="form-input" placeholder="Your name">
+        </div>
+        <div class="form-group">
+          <label class="form-label">Date of Birth</label>
+          <input type="date" class="form-input">
+        </div>
+        <div class="form-group">
+          <label class="form-label">Service Required</label>
+          <select class="form-select">
+            <option value="">Select a service</option>
+            <option>Vedic Astrology — Kundali Reading</option>
+            <option>Numerology Analysis</option>
+            <option>Bhavishya Malika Interpretation</option>
+            <option>Bhagavad Gita Guidance</option>
+            <option>Muhurta — Auspicious Timing</option>
+            <option>Gemstone Recommendation</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Your Question</label>
+          <textarea class="form-textarea" placeholder="Describe what guidance you seek…"></textarea>
+        </div>
+        <button class="btn-primary" onclick="alert('Your consultation request has been received. Jai Shri Ram 🙏')">Submit Request</button>
+      </div>
+      <div>
+        <div style="font-family:'Cinzel',serif; font-size:1rem; font-weight:700; color:var(--gold-pale); margin-bottom:1.5rem;">Get in Touch</div>
+        <div class="contact-info-item">
+          <div class="contact-info-icon">📍</div>
+          <div>
+            <div class="contact-info-label">Location</div>
+            <div class="contact-info-value">India (Consultations available worldwide)</div>
+          </div>
+        </div>
+        <div class="contact-info-item">
+          <div class="contact-info-icon">📧</div>
+          <div>
+            <div class="contact-info-label">Email</div>
+            <div class="contact-info-value">info@bhavishyadarpan.com</div>
+          </div>
+        </div>
+        <div class="contact-info-item">
+          <div class="contact-info-icon">📱</div>
+          <div>
+            <div class="contact-info-label">WhatsApp</div>
+            <div class="contact-info-value">+91 XXXXX XXXXX</div>
+          </div>
+        </div>
+        <div class="contact-info-item">
+          <div class="contact-info-icon">🕐</div>
+          <div>
+            <div class="contact-info-label">Session Hours</div>
+            <div class="contact-info-value">Monday–Saturday, 10 AM – 8 PM IST</div>
+          </div>
+        </div>
+        <div style="margin-top:2rem; padding:1.5rem; border:1px solid rgba(201,146,42,0.2); background:rgba(201,146,42,0.04); border-radius:2px;">
+          <div style="font-family:'Cinzel',serif; font-size:10px; letter-spacing:0.2em; color:var(--gold); margin-bottom:0.75rem; text-transform:uppercase;">सेवा शुल्क</div>
+          <div style="font-size:0.9rem; color:rgba(250,240,220,0.65); line-height:1.8; font-weight:300;">
+            Personal Kundali Reading — ₹1,100<br>
+            Numerology Report — ₹700<br>
+            Detailed Life Reading — ₹2,100<br>
+            Live Session (30 min) — ₹500
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div>
+        <div class="footer-brand">
+          <svg width="30" height="30" viewBox="0 0 30 30">
+            <circle cx="15" cy="15" r="14" fill="none" stroke="rgba(201,146,42,0.5)" stroke-width="1"/>
+            <text x="15" y="20" text-anchor="middle" fill="#C9922A" font-size="13" font-family="serif">♐</text>
+          </svg>
+          <div class="footer-brand-name">BHAVISHYA DARPAN</div>
+        </div>
+        <p class="footer-tagline">युगो युगो धर्मः पुनः स्थापितः<br>Dharma re-established, age after age.</p>
+        <p style="font-size:0.8rem; color:rgba(250,240,220,0.35); font-weight:300; line-height:1.7;">Ancient wisdom for the modern seeker. Grounded in Vedic scripture, illuminated by divine grace.</p>
+      </div>
+      <div>
+        <div class="footer-col-title">Services</div>
+        <ul class="footer-links">
+          <li><a href="#">Vedic Astrology</a></li>
+          <li><a href="#">Numerology</a></li>
+          <li><a href="#">Bhavishya Malika</a></li>
+          <li><a href="#">Bhagavad Gita</a></li>
+          <li><a href="#">Muhurta</a></li>
+          <li><a href="#">Gemstones</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">Resources</div>
+        <ul class="footer-links">
+          <li><a href="#">Articles & Blogs</a></li>
+          <li><a href="#">List of Proofs</a></li>
+          <li><a href="#">Panchang 2026</a></li>
+          <li><a href="#">Free Kundali</a></li>
+          <li><a href="#">Video Lectures</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">Connect</div>
+        <ul class="footer-links">
+          <li><a href="#">YouTube Channel</a></li>
+          <li><a href="#">Telegram Group</a></li>
+          <li><a href="#">WhatsApp Community</a></li>
+          <li><a href="#">Facebook Page</a></li>
+          <li><a href="#">Instagram</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-copy">© 2026 Bhavishya Darpan. All rights reserved. | Jai Shri Ram 🙏</div>
+      <div class="footer-socials">
+        <a href="#" title="YouTube">▶</a>
+        <a href="#" title="Telegram">✈</a>
+        <a href="#" title="WhatsApp">💬</a>
+        <a href="#" title="Instagram">📷</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

@@ -377,15 +377,15 @@
       <div>
         <div class="form-group">
           <label class="form-label">Full Name</label>
-          <input type="text" class="form-input" placeholder="Your name">
+          <input type="text" id="name" class="form-input" placeholder="Your name">
         </div>
         <div class="form-group">
           <label class="form-label">Date of Birth</label>
-          <input type="date" class="form-input">
+          <input type="date" id="dob" class="form-input">
         </div>
         <div class="form-group">
           <label class="form-label">Service Required</label>
-          <select class="form-select">
+          <select id="service" class="form-select">
             <option value="">Select a service</option>
             <option>Vedic Astrology — Kundali Reading</option>
             <option>Numerology Analysis</option>
@@ -397,9 +397,9 @@
         </div>
         <div class="form-group">
           <label class="form-label">Your Question</label>
-          <textarea class="form-textarea" placeholder="Describe what guidance you seek…"></textarea>
+          <textarea id="question" class="form-textarea" placeholder="Describe what guidance you seek…"></textarea>
         </div>
-        <button class="btn-primary" onclick="alert('Your consultation request has been received. Jai Shri Ram 🙏')">Submit Request</button>
+       <button id="submitBtn" class="btn-primary">Submit Request</button>
       </div>
       <div>
         <div style="font-family:'Cinzel',serif; font-size:1rem; font-weight:700; color:var(--gold-pale); margin-bottom:1.5rem;">Get in Touch</div>
@@ -421,7 +421,7 @@
           <div class="contact-info-icon">📱</div>
           <div>
             <div class="contact-info-label">WhatsApp</div>
-            <div class="contact-info-value">+91 XXXXX XXXXX</div>
+            <div class="contact-info-value">+91 8178603954 </div>
           </div>
         </div>
         <div class="contact-info-item">
@@ -434,9 +434,9 @@
         <div style="margin-top:2rem; padding:1.5rem; border:1px solid rgba(201,146,42,0.2); background:rgba(201,146,42,0.04); border-radius:2px;">
           <div style="font-family:'Cinzel',serif; font-size:10px; letter-spacing:0.2em; color:var(--gold); margin-bottom:0.75rem; text-transform:uppercase;">सेवा शुल्क</div>
           <div style="font-size:0.9rem; color:rgba(250,240,220,0.65); line-height:1.8; font-weight:300;">
-            Personal Kundali Reading — ₹1,100<br>
+            Personal Kundali Reading — ₹1000<br>
             Numerology Report — ₹700<br>
-            Detailed Life Reading — ₹2,100<br>
+            Detailed Life Reading — ₹1,500<br>
             Live Session (30 min) — ₹500
           </div>
         </div>
